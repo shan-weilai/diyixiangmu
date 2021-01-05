@@ -272,7 +272,7 @@ export let reqcateDel = (user)=>{
 
 
 
-// 商品规格管理 start
+// 商品规格管理
 
 //添加 user={}
 export let reqspecsAdd = (user) => {
@@ -326,10 +326,10 @@ export let reqspecsCount = () => {
     })
 }
 
-// 商品规格管理 end
+// 商品规格管理 
 
 
-// 商品管理 start
+// 商品管理 
 
 //添加 user={}
 export let reqgoodsAdd = (user) => {
@@ -383,4 +383,4 @@ export let reqgoodsCount = () => {
     })
 }
 
-// 商品管理 end
+// 商品管理

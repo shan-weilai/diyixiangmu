@@ -30,9 +30,20 @@ export default {
       }
     }
   },
-  methods:{
+  	methods:{
+    ...mapActions({
+      changeUser:"changeUser"
+    }),
+    //登录
     login(){
-      this.$router.push("/ ")
+      reqLogin(this.user).then(res=>{
+        if(res.data.code===200){
+          //如果登录成功了，将用户的信息存入store
+          this.changeUser(res.data.list)
+          //跳转页面
+          this.$router.push("/")
+        }
+      })
     }
   }
 

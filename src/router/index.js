@@ -60,7 +60,7 @@ function checkEnter(path,next){
   }
    ]
 
-export default new Router({
+let router = new Router({
   routes: [
    {
      path:"/login",
@@ -79,4 +79,20 @@ export default new Router({
    }
   ]
 })
+//登录拦截
+// router.beforeEach((to,from,next)=>{
+//   //如果去到是登录 next
+//   if(to.path==="/login"){
+//     next()
+//     return
+//   }
+//   //不是登录，判断是否登录，登录了，就next
+//   if(store.state.userInfo.id){
+//     next()
+//     return;
+//   }
+//   //否则 next("/login")
+//   next("/login")
+// })
 
+export default router

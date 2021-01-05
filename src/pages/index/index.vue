@@ -69,8 +69,18 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
 export default {
-
+    methods: {
+    ...mapActions({
+      changeUser: "changeUser"
+    }),
+    //退出登录
+    logout(){
+      this.changeUser({})
+      this.$router.replace("/login")
+    }
+  },
 }
 </script>
 

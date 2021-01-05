@@ -42,7 +42,7 @@ import {
   reqspecsDetail,
   reqspecsUpdate
 } from "../../../utils/http";
-import { successalert, erroralert } from "../../../utils/http";
+import { successalert, erroralert } from "../../../utils/alert";
 export default {
   props: ["info"],
   data() {
